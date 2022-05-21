@@ -3,4 +3,27 @@
     --bright-yellow: hsl(71, 73%, 54%);
     --light-gray: hsl(204, 43%, 93%);
     --gray-blue: hsl(218, 22%, 67%);
+    --other-cyan: hsl(179, 62%, 65%);
+
+}
+body{
+    background-color: var(--light-gray);
+}
+.card{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "join join" "subscribe whyUs";
+    /* row-gap: 10%; */
+}
+.item1{
+    grid-area: join;
+    background-color: white;
+}
+.item2{
+    grid-area: subscribe;
+    background-color: var(--cyan);
+}
+.item3{
+    grid-area: whyUs;
+    background-color: var(--other-cyan)
 }
