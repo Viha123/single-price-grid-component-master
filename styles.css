@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
 *{
     --cyan: hsl(179, 62%, 43%);
     --bright-yellow: hsl(71, 73%, 54%);
@@ -8,11 +9,18 @@
 }
 body{
     background-color: var(--light-gray);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: "Karla", sans-serif;
 }
 .card{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas: "join join" "subscribe whyUs";
+    max-width: 75vw;
+    min-height: 65vh;
     /* row-gap: 10%; */
 }
 .item1{
@@ -22,8 +30,81 @@ body{
 .item2{
     grid-area: subscribe;
     background-color: var(--cyan);
+    color: white;
 }
 .item3{
     grid-area: whyUs;
-    background-color: var(--other-cyan)
+    background-color: var(--other-cyan);
+    color: white;
+}
+.list{
+    list-style-type: none;
+}
+.heading{
+    color: var(--cyan);
+    font-weight: 700;
+    font-size: 2rem;
+    padding: 50px 0px 10px 50px;
+}
+.line2{
+    color: var(--bright-yellow);
+    font-size: 1.5rem;
+    padding: 10px 0px 30px 50px;
+    font-weight: 700;
+}
+
+.desc{
+    color: var(--gray-blue);
+    font-weight: 400;
+    padding: 0px 0px 5px 50px;
+    font-size: 1.2rem;
+}
+.line3{
+    margin-bottom: 50px
+}
+.title{
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding: 20px 0px 10px 50px;
+}
+.sub-flex{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    padding: 10px 0px 10px 50px;
+}
+.cost{
+    font-size: 2rem;
+    font-weight: 700;
+    
+}
+.per-month{
+    font-weight: 400;
+    color: var(--light-gray);
+    padding-left: 20px;
+}
+.offer{
+    font-weight: 400;
+    padding-left: 50px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+.button{
+    padding: 15px 30px 15px 30px;
+    text-align: center;
+    background-color: var(--bright-yellow);
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 20px;
+}
+li{
+    padding-left: 10px
+}
+@media screen and (max-width: 600px) {
+    .card{
+        display: flex;
+        flex-direction: column;
+
+    }
 }
